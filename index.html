@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anti-Korupsi</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/76332dff60.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -24,7 +25,7 @@
                         <li><a href="#" class="nav-item">Beranda</a></li>
                         <li><a href="#about" class="nav-item">Tentang</a></li>
                         <li><a href="#platform" class="nav-item">Platform</a></li>
-                        <li><a href="#" class="nav-item">Dampak</a></li>
+                        <li><a href="#dampak" class="nav-item">Dampak</a></li>
                         <li><a href="#" class="nav-item">Bergabung</a></li>
                     </ul>
                     <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block">Masuk</a>
@@ -210,9 +211,152 @@
     </div>
 </section>
 
+<!-- Dampak Kami Section -->
+<section id="dampak" class="bg-[#012A5B] py-16 text-white">
+    <div class="container mx-auto text-center">
+        <h3 class="text-sm font-semibold text-blue-300 uppercase tracking-widest">DAMPAK KAMI</h3>
+        <h2 class="text-3xl font-extrabold mt-2">Membuat Perubahan Bersama</h2>
+        <p class="mt-4 text-blue-200 max-w-2xl mx-auto">
+            Melalui aksi kolektif dan dedikasi, komunitas kami telah mencapai tonggak penting dalam pemberantasan korupsi.
+        </p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-[#0A3D72] p-6 rounded-lg text-center border border-[#0D4F8B]">
+                <h3 class="text-4xl font-extrabold text-[#6EC6FF]">10,000+</h3>
+                <p class="mt-2 text-blue-200">Anggota Komunitas</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[#0A3D72] p-6 rounded-lg text-center border border-[#0D4F8B]">
+                <h3 class="text-4xl font-extrabold text-[#6EC6FF]">500+</h3>
+                <p class="mt-2 text-blue-200">Laporan Ditangani</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-[#0A3D72] p-6 rounded-lg text-center border border-[#0D4F8B]">
+                <h3 class="text-4xl font-extrabold text-[#6EC6FF]">50+</h3>
+                <p class="mt-2 text-blue-200">Organisasi Mitra</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-[#0A3D72] p-6 rounded-lg text-center border border-[#0D4F8B]">
+                <h3 class="text-4xl font-extrabold text-[#6EC6FF]">120+</h3>
+                <p class="mt-2 text-blue-200">Sumber Daya Edukasi</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Bergabung dengan Komunitas -->
+<section id="bergabung" class="bg-gradient-to-r from-[#0A2A66] via-[#05204D] to-[#01143A] flex items-center justify-center py-16 px-6">
+    <div class="max-w-4xl w-full bg-[#E8EEF7] rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden border border-[#CBD6E2]">
+        <!-- Bagian Teks -->
+        <div class="w-full md:w-[55%] p-8">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-[#0A2A66] leading-tight">
+                Bergabung dengan <br> Komunitas Kami
+            </h2>
+            <p class="text-[#4A6178] mt-3 text-base md:text-lg leading-relaxed">
+                Jadilah bagian dari gerakan yang berkembang yang berdedikasi untuk mendorong transparansi
+                dan akuntabilitas. Bersama, kita bisa membuat perubahan.
+            </p>
+            
+            <div class="mt-5">
+                <input type="email" placeholder="Masukkan email Anda" 
+                    class="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:ring focus:ring-blue-300 shadow-sm text-lg bg-white">
+            </div>
+
+            <button class="mt-3 w-full bg-[#157AFF] hover:bg-[#106ED2] text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center transition-all text-lg">
+                Berlangganan Newsletter 
+                <span class="ml-2 text-xl">➜</span>
+            </button>
+            
+            <p class="text-[#5D738A] text-sm mt-2 leading-snug">
+                Dengan berlangganan, Anda menyetujui <span class="text-[#3D5267] font-medium">Kebijakan Privasi</span> dan <span class="text-[#3D5267] font-medium">Ketentuan Layanan</span> kami.
+            </p>
+        </div>
+
+        <!-- Bagian Gambar -->
+        <div class="w-full md:w-[45%]">
+            <img src="images/laptop.png" alt="Bergabung dengan Komunitas" class="w-full h-full object-cover">
+        </div>
+    </div>
+</section>
+
 
 
     <!-- Footer -->
+    <footer class="bg-[#0A1930] text-gray-300 py-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Kolom 1: Logo dan Deskripsi -->
+            <div>
+                <h2 class="text-lg font-bold flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    AntiKorupsi
+                </h2>
+                <p class="text-gray-400 mt-2 text-sm leading-relaxed">
+                    Membangun masyarakat yang transparan dan bebas korupsi melalui aksi komunitas dan edukasi.
+                </p>
+                <!-- Sosial Media -->
+                <div class="flex space-x-4 mt-3 text-gray-400">
+                    <a href="#" class="hover:text-white">
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <i class="fa-brands fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <i class="fa-brands fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Kolom 2: Tautan Cepat -->
+            <div>
+                <h3 class="font-semibold text-white">Tautan Cepat</h3>
+                <ul class="mt-3 space-y-2">
+                    <li><a href="#" class="hover:text-blue-400">Beranda</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Tentang</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Fitur</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Dampak</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Bergabung</a></li>
+                </ul>
+            </div>
+    
+            <!-- Kolom 3: Sumber Daya -->
+            <div>
+                <h3 class="font-semibold text-white">Sumber Daya</h3>
+                <ul class="mt-3 space-y-2">
+                    <li><a href="#" class="hover:text-blue-400">Blog</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Studi Kasus</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Laporan</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Edukasi</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Alat</a></li>
+                </ul>
+            </div>
+    
+            <!-- Kolom 4: Kontak -->
+            <div>
+                <h3 class="font-semibold text-white">Hubungi Kami</h3>
+                <ul class="mt-3 space-y-2">
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-envelope mr-2"></i>
+                        <a href="mailto:kontak@antikorupsi.org" class="hover:text-blue-400">kontak@antikorupsi.org</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-brands fa-github mr-2"></i>
+                        <a href="#" class="hover:text-blue-400">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
     <footer class="bg-gray-900 text-white py-10">
         <div class="container mx-auto text-center">
             <p>&copy; 2025 Anti-Korupsi. Hak Cipta Dilindungi.</p>
