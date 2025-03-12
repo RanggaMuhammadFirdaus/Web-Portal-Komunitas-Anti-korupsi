@@ -1,41 +1,40 @@
 /* Default navbar styles */
 #navbar {
     background-color: transparent;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
 }
 
 /* When scrolled */
 .nav-scrolled {
     background-color: white !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px; /* Reduce padding on scroll */
 }
 
 /* Change text color when scrolled */
 .nav-scrolled .nav-item {
-    color: #00296B !important; /* Blue text */
-    font-weight: 600; /* Slightly bolder */
+    color: #00296B !important;
+    font-weight: 600;
 }
 
 /* Change title color when scrolled */
 .nav-scrolled #navbar-title {
-    color: #00296B !important; /* Blue title */
+    color: #00296B !important;
 }
-
-/* Keep the login button the same */
-.nav-scrolled .login-btn {
-    background-color: #176BFF !important; /* Blue button */
-    color: white !important;
-}
-
-/* Change hamburger button color when scrolled */
-.nav-scrolled #menu-toggle {
-    color: #6A0DAD !important; /* Purple button */
-}   
 
 /* Keep the login button the same */
 .nav-scrolled .login-btn {
     background-color: #176BFF !important;
     color: white !important;
+}
+
+/* Change hamburger button color when scrolled */
+.nav-scrolled #menu-toggle {
+    color: #6A0DAD !important;
 }
 
 /* Hover effect for underline */
@@ -44,6 +43,12 @@
     text-underline-offset: 4px;
 }
 
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll down icon animation */
 .scroll-down {
     display: inline-block;
     transition: transform 0.3s ease-in-out;
@@ -53,38 +58,134 @@
     transform: translateY(5px);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /* Mobile Menu */
 #mobile-menu {
-    background-color: rgba(4, 25, 56, 0.99); /* Dark blue with 90% opacity */
-    transition: opacity 0.3s ease-in-out;
-    z-index: 10000; /* Ensure it's on top of everything */
+    background-color: rgba(4, 25, 56, 0.99);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 10000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Show menu when active */
+#mobile-menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Adjust menu item alignment */
 #mobile-menu ul {
-    text-align: left; /* Align text to the left */
-    width: 100%; /* Ensure it takes full width */
+    text-align: center;
+    width: 100%;
+    padding: 0;
 }
 
 #mobile-menu ul li a {
-    text-align: left;     
-    padding-left: 25px;   
+    display: block;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: white;
 }
 
 /* Make the "Masuk" button full width */
 #mobile-menu button {
-    width: 90%; /* Full width */
-    text-align: center; /* Keep text centered */
-    padding: 15px 0; /* Adjust padding for better appearance */
+    width: 90%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.2rem;
 }
 
+/* Ensure the toggle button is always clickable */
 #menu-toggle {
-    z-index: 1100; /* Ensure the toggle button is always clickable */
-    position: relative; /* Avoid overlap issues */
+    z-index: 1100;
+    position: relative;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #navbar {
+        padding: 10px 15px;
+    }
 
+    .nav-item {
+        font-size: 0.9rem; /* Reduce font size for small screens */
+    }
+
+    .login-btn {
+        padding: 8px 15px; /* Adjust button size */
+        font-size: 0.9rem;
+    }
+
+    #menu-toggle {
+        font-size: 1.5rem; /* Larger menu icon */
+    }
+
+    #mobile-menu ul li a {
+        font-size: 1rem; /* Adjust text size in mobile menu */
+    }
+
+    #mobile-menu button {
+        font-size: 1rem; /* Adjust button size in mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    #navbar {
+        padding: 8px 10px;
+    }
+
+    .nav-item {
+        font-size: 0.85rem;
+    }
+
+    .login-btn {
+        padding: 7px 12px;
+        font-size: 0.85rem;
+    }
+
+    #menu-toggle {
+        font-size: 1.4rem;
+    }
+
+    #mobile-menu ul li a {
+        font-size: 0.9rem;
+    }
+
+    #mobile-menu button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Sembunyikan menu utama di tablet dan mobile */
+    .nav-items {
+        display: none;
+    }
+
+    /* Tampilkan hamburger button */
+    #menu-toggle {
+        display: block;
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Pastikan menu utama tampil di layar lebar */
+    .nav-items {
+        display: flex !important;
+    }
+
+    /* Sembunyikan hamburger button */
+    #menu-toggle {
+        display: none;
+    }
+}

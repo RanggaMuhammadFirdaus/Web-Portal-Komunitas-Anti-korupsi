@@ -12,45 +12,45 @@
 </head>
 <body class="bg-[#04336c] font-[Poppins]">
 
-    <!-- Navbar -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 transition duration-300 bg-[#04336c]">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="flex items-center">
-                <span class="bg-[#002b66] text-white font-bold text-sm px-2 py-1 rounded-full flex items-center justify-center w-8 h-8">AK</span>
-                <span id="navbar-title" class="text-white text-2xl font-bold ml-2">AntiKorupsi</span>
-            </a>
-            
-            <!-- Menu Toggle Button (Hamburger) -->
-            <button id="menu-toggle" class="text-white text-2xl md:hidden">
-                <i class="fas fa-bars"></i>
-            </button>
+        <!-- Navbar -->
+        <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 bg-[#04336c] transition duration-300">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                    <span class="bg-[#002b66] text-white font-bold text-sm px-2 py-1 rounded-full w-8 h-8 flex items-center justify-center">AK</span>
+                    <span id="navbar-title" class="text-white text-2xl font-bold ml-2">AntiKorupsi</span>
+                </a>
+                
+                <!-- Menu Toggle Button (Hamburger) -->
+                <button id="menu-toggle" class="text-white text-2xl md:hidden">
+                    <i class="fas fa-bars"></i>
+                </button>
 
-            <!-- Navbar Menu -->
-            <ul id="nav-menu" class="hidden md:flex space-x-6 text-white md:block">
-                <li><a href="#" class="nav-item">Beranda</a></li>
-                <li><a href="#about" class="nav-item">Tentang</a></li>
-                <li><a href="#platform" class="nav-item">Platform</a></li>
-                <li><a href="#dampak" class="nav-item">Dampak</a></li>
-                <li><a href="#" class="nav-item">Bergabung</a></li>
+                <!-- Navbar Menu -->
+                <ul id="nav-items" class="hidden md:flex space-x-6 text-white">
+                    <li><a href="#" class="nav-item">Beranda</a></li>
+                    <li><a href="#about" class="nav-item">Tentang</a></li>
+                    <li><a href="#platform" class="nav-item">Platform</a></li>
+                    <li><a href="#dampak" class="nav-item">Dampak</a></li>
+                    <li><a href="#" class="nav-item">Bergabung</a></li>
+                </ul>
+
+                <!-- Login Button -->
+                <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block">Masuk</a>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-[#04336c] hidden flex flex-col items-center justify-center text-white">
+            <ul class="text-center space-y-6 text-lg font-semibold w-full">
+                <li><a href="#" class="block">Beranda</a></li>
+                <li><a href="#about" class="block">Tentang</a></li>
+                <li><a href="#platform" class="block">Platform</a></li>
+                <li><a href="#dampak" class="block">Dampak</a></li>
+                <li><a href="#" class="block">Bergabung</a></li>
             </ul>
-
-            <!-- Login Button -->
-            <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block">Masuk</a>
+            <button id="close-menu" class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold w-10/12">Masuk</button>
         </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-[#04336c] flex flex-col items-center justify-center text-white">
-        <ul class="text-center space-y-6 text-lg font-semibold">
-            <li><a href="#" class="block">Beranda</a></li>
-            <li><a href="#about" class="block">Tentang</a></li>
-            <li><a href="#platform" class="block">Platform</a></li>
-            <li><a href="#dampak" class="block">Dampak</a></li>
-            <li><a href="#" class="block">Bergabung</a></li>
-        </ul>
-        <button id="close-menu" class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold">Masuk</button>
-    </div>
 
 
         
@@ -386,30 +386,50 @@
 
 
     <script>
-        window.addEventListener('scroll', function () {
-    let navbar = document.getElementById('navbar');
-
-    // Apply the effect as soon as scrolling starts (scrollY > 10)
-    if (window.scrollY > 10) { 
-        navbar.classList.add('nav-scrolled'); // Apply styles
-    } else {
-        navbar.classList.remove('nav-scrolled'); // Remove styles
-    }
+        document.addEventListener("DOMContentLoaded", function () {
+            let navbar = document.getElementById("navbar");
+            let menuToggle = document.getElementById("menu-toggle");
+            let mobileMenu = document.getElementById("mobile-menu");
+            let closeMenu = document.getElementById("close-menu");
+            let menuLinks = document.querySelectorAll("#mobile-menu a");
+        
+            // Efek navbar berubah warna saat scroll
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 10) {
+                    navbar.classList.add("nav-scrolled");
+                } else {
+                    navbar.classList.remove("nav-scrolled");
+                }
+            });
+        
+            // Toggle mobile menu saat tombol hamburger ditekan
+            if (menuToggle) {
+                menuToggle.addEventListener("click", function () {
+                    mobileMenu.classList.toggle("active");
+                });
+            }
+        
+            // Tutup mobile menu saat tombol close ditekan
+            if (closeMenu) {
+                closeMenu.addEventListener("click", function () {
+                    mobileMenu.classList.remove("active");
+                });
+            }
+        
+            // Tutup menu ketika salah satu item menu diklik
+            menuLinks.forEach(item => {
+                item.addEventListener("click", function () {
+                    mobileMenu.classList.remove("active");
+                });
+            });
         });
-
-        document.getElementById("menu-toggle").addEventListener("click", function () {
-            document.getElementById("mobile-menu").classList.toggle("hidden");
-        });
-
-        document.getElementById("close-menu").addEventListener("click", function () {
-            document.getElementById("mobile-menu").classList.add("hidden");
-        });
+        
 
         document.querySelectorAll("#mobile-menu a").forEach(item => {
-        item.addEventListener("click", function () {
-            document.getElementById("mobile-menu").classList.add("hidden");
+            item.addEventListener("click", function () {
+                document.getElementById("mobile-menu").classList.add("hidden");
+            });
         });
-    });
     </script>
     
     
