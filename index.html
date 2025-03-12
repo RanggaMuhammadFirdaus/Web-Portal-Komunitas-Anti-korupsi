@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Korupsi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#04336c] font-[Poppins]">
+
+        <!-- Navbar -->
+        <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 transition duration-300 bg-[#04336c]">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                    <span class="bg-[#002b66] text-white font-bold text-sm px-2 py-1 rounded-full flex items-center justify-center w-8 h-8">AK</span>
+                    <span id="navbar-title" class="text-white text-2xl font-bold ml-2">AntiKorupsi</span>
+                </a>
+                <div class="flex items-center space-x-6">
+                    <ul class="hidden md:flex space-x-6 text-white">
+                        <li><a href="#" class="nav-item">Beranda</a></li>
+                        <li><a href="#about" class="nav-item">Tentang</a></li>
+                        <li><a href="#platform" class="nav-item">Platform</a></li>
+                        <li><a href="#" class="nav-item">Dampak</a></li>
+                        <li><a href="#" class="nav-item">Bergabung</a></li>
+                    </ul>
+                    <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block">Masuk</a>
+                </div>
+            </div>
+        </nav>
+        
+
+
+    <!-- Hero Section -->
+    <header class="bg-[#04336c] text-white py-16">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 px-6">
+                <!-- Portal Komunitas Anti Korupsi -->
+                <span class="inline-flex items-center bg-[#1a497c] text-white px-6 py-1 rounded-full border border-white text-sm md:text-base bg-opacity-100 tracking-wide mt-12">
+                    <!-- Image Icon -->
+                    <img src="images/shield.png" alt="Shield Icon" class="w-5 h-5 mr-2">                    
+                    Portal Komunitas Anti Korupsi
+                </span> 
+
+
+                <!-- Main Heading -->
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight mt-3">
+                    Bersama untuk <br> Masa Depan yang <br> 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-950 to-blue-600 font-extrabold">
+                        Transparan
+                    </span>
+                </h1>
+
+                <!-- Description -->
+                <p class="mt-4 text-lg">Bergabunglah dengan komunitas kami dalam melawan korupsi. Bersama, kita dapat menciptakan masyarakat yang lebih jujur, adil, dan transparan.</p>
+
+                <!-- Buttons -->
+                <div class="mt-6 flex space-x-4">
+                    <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold">Bergabung Sekarang</a>
+                    <a href="#" class="bg-gray-300 text-blue-900 px-6 py-3 rounded-md font-semibold transition duration-300 hover:bg-blue-900 hover:text-white">
+                        Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+            <!-- Image Section -->
+            <div class="md:w-1/2 px-6 mt-8 md:mt-0">
+                <img src="images/landingpage2.jpg" alt="Anti Korupsi" class="w-full md:w-[700px] lg:w-[700px] rounded-lg shadow-lg">
+            </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="flex flex-col items-center mt-10 opacity-70 animate-bounce">            
+            <a href="#about" class="scroll-down">
+                <p class="text-white text-lg font-semibold mb-2">Gulir</p>
+                <svg class="w-10 h-10 text-white opacity-70" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- About Section -->
+<section id="about" class="bg-white py-16">
+    <div class="container mx-auto text-center">
+        <h3 class="text-sm font-semibold text-blue-600 uppercase">TENTANG MISI KAMI</h3>
+        <h2 class="text-4xl font-bold text-[#012A5B] mt-2">Membangun Masyarakat Bebas Korupsi</h2>
+        <p class="mt-4 text-gray-600">
+            Komunitas kami berdedikasi untuk memerangi korupsi melalui aksi kolektif, edukasi, <br> 
+            dan advokasi. Kami percaya transparansi adalah fondasi masyarakat yang adil.
+        </p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Integritas -->
+            <div class="text-center">
+                <div class="flex justify-center">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/security.png" alt="Integritas Icon" class="w-12 h-12">
+                    </div>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-900 mt-4">Integritas</h3>
+                <p class="text-gray-600 mt-2">Kami menjunjung tinggi standar <br> kejujuran dan etika tertinggi dalam <br> setiap aksi dan inisiatif kami.</p>
+            </div>
+
+            <!-- Keadilan -->
+            <div class="text-center">
+                <div class="flex justify-center">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/timbangan.png" alt="Keadilan Icon" class="w-12 h-12">
+                    </div>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-900 mt-4">Keadilan</h3>
+                <p class="text-gray-600 mt-2">Kami bekerja untuk memastikan akses <br> yang setara terhadap keadilan dan <br> akuntabilitas untuk semua lapisan <br> masyarakat.</p>
+            </div>
+
+            <!-- Komunitas -->
+            <div class="text-center">
+                <div class="flex justify-center">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/group.png" alt="Komunitas Icon" class="w-12 h-12">
+                    </div>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-900 mt-4">Komunitas</h3>
+                <p class="text-gray-600 mt-2">Kami membangun lingkungan <br> kolaboratif di mana warga dapat <br> bekerja sama untuk mendorong <br> perubahan yang berarti.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Platform Section -->
+<section id="platform" class="bg-[#e6f0ff] py-16">
+    <div class="container mx-auto text-center">
+        <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-widest">PLATFORM KAMI</h3>
+        <h2 class="text-3xl font-extrabold text-[#012A5B] mt-2">Alat yang Kuat untuk Transparansi</h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Platform kami menyediakan alat dan sumber daya komprehensif untuk membantu warga, organisasi, dan pemerintah memerangi korupsi secara efektif.
+        </p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Laporan Korupsi -->
+            <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-center left-0 mb-4">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/flag.png" alt="Laporkan Korupsi" class="w-5 h-5">
+                    </div>
+                </div>
+                <h3 class="text-xl text-left font-semibold text-blue-900">Laporkan Korupsi</h3>
+                <p class="text-gray-600 text-left mt-2">Laporkan insiden korupsi secara aman melalui sistem pelaporan anonim kami.</p>
+            </div>
+
+            <!-- Dukungan Komunitas -->
+            <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-center left-0 mb-4">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/hand.png" alt="Dukungan Komunitas" class="w-5 h-5">
+                    </div>
+                </div>
+                <h3 class="text-xl text-left font-semibold text-blue-900">Dukungan Komunitas</h3>
+                <p class="text-gray-600 text-left mt-2">Terhubung dengan para advokat dan dapatkan dukungan untuk mengatasi masalah terkait korupsi.</p>
+            </div>
+
+            <!-- Akses Sumber Daya -->
+            <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-center left-0 mb-4">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/key.png" alt="Akses Sumber Daya" class="w-5 h-5">
+                    </div>
+                </div>
+                <h3 class="text-xl text-left font-semibold text-blue-900">Akses Sumber Daya</h3>
+                <p class="text-gray-600 text-left mt-2">Akses alat anti-korupsi, panduan, dan materi edukasi yang komprehensif.</p>
+            </div>
+
+            <!-- Jaringan Global -->
+            <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-center left-0 mb-4">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/global.png" alt="Akses Sumber Daya" class="w-5 h-5">
+                    </div>
+                </div>
+                <h3 class="text-xl text-left font-semibold text-blue-900">Jaringan Global</h3>
+                <p class="text-gray-600 text-left mt-2">Bergabung dengan jaringan aktivis dan organisasi anti-korupsi di seluruh dunia.</p>
+            </div>
+
+            <!-- Indeks Transparansi -->
+            <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-center left-0 mb-4">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/search.png" alt="Akses Sumber Daya" class="w-5 h-5">
+                    </div>
+                </div>
+                <h3 class="text-xl text-left font-semibold text-blue-900">Indeks Transparansi</h3>
+                <p class="text-gray-600 text-left mt-2">Jelajahi database peringkat transparansi untuk institusi publik.</p>
+            </div>
+
+            <!-- Informasi Terverifikasi -->
+            <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-center left-0 mb-4">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/checklist.png" alt="Akses Sumber Daya" class="w-5 h-5">
+                    </div>
+                </div>
+                <h3 class="text-xl text-left font-semibold text-blue-900">Informasi Terverifikasi</h3>
+                <p class="text-gray-600 text-left mt-2">Dapatkan informasi yang telah diverifikasi tentang kasus korupsi dan metode pencegahannya.</p>
+            </div>            
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Anti-Korupsi. Hak Cipta Dilindungi.</p>
+            <div class="mt-4">
+                <a href="#" class="mx-2 hover:text-yellow-400">Beranda</a> |
+                <a href="#" class="mx-2 hover:text-yellow-400">Tentang</a> |
+                <a href="#" class="mx-2 hover:text-yellow-400">Fitur</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        window.addEventListener('scroll', function () {
+    let navbar = document.getElementById('navbar');
+
+    // Apply the effect as soon as scrolling starts (scrollY > 10)
+    if (window.scrollY > 10) { 
+        navbar.classList.add('nav-scrolled'); // Apply styles
+    } else {
+        navbar.classList.remove('nav-scrolled'); // Remove styles
+    }
+        });
+    </script>
+    
+    
+</body>
+</html>

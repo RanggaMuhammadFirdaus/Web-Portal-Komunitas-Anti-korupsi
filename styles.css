@@ -1,0 +1,48 @@
+/* Default navbar styles */
+#navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* When scrolled */
+.nav-scrolled {
+    background-color: white !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Change text color when scrolled */
+.nav-scrolled .nav-item {
+    color: #00296B !important; /* Blue text */
+    font-weight: 600; /* Slightly bolder */
+}
+
+/* Change title color when scrolled */
+.nav-scrolled #navbar-title {
+    color: #00296B !important; /* Blue title */
+}
+
+/* Keep the login button the same */
+.nav-scrolled .login-btn {
+    background-color: #176BFF !important; /* Blue button */
+    color: white !important;
+}
+
+/* Hover effect for underline */
+.nav-item:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.scroll-down {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.scroll-down:hover {
+    transform: translateY(5px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
