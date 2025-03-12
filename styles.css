@@ -27,6 +27,17 @@
     color: white !important;
 }
 
+/* Change hamburger button color when scrolled */
+.nav-scrolled #menu-toggle {
+    color: #6A0DAD !important; /* Purple button */
+}   
+
+/* Keep the login button the same */
+.nav-scrolled .login-btn {
+    background-color: #176BFF !important;
+    color: white !important;
+}
+
 /* Hover effect for underline */
 .nav-item:hover {
     text-decoration: underline;
@@ -45,4 +56,35 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* Mobile Menu */
+#mobile-menu {
+    background-color: rgba(4, 25, 56, 0.99); /* Dark blue with 90% opacity */
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10000; /* Ensure it's on top of everything */
+}
+
+/* Adjust menu item alignment */
+#mobile-menu ul {
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Ensure it takes full width */
+}
+
+#mobile-menu ul li a {
+    text-align: left;     
+    padding-left: 25px;   
+}
+
+/* Make the "Masuk" button full width */
+#mobile-menu button {
+    width: 90%; /* Full width */
+    text-align: center; /* Keep text centered */
+    padding: 15px 0; /* Adjust padding for better appearance */
+}
+
+#menu-toggle {
+    z-index: 1100; /* Ensure the toggle button is always clickable */
+    position: relative; /* Avoid overlap issues */
+}
+
 

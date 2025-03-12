@@ -12,26 +12,47 @@
 </head>
 <body class="bg-[#04336c] font-[Poppins]">
 
-        <!-- Navbar -->
-        <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 transition duration-300 bg-[#04336c]">
-            <div class="container mx-auto flex justify-between items-center">
-                <!-- Logo -->
-                <a href="#" class="flex items-center">
-                    <span class="bg-[#002b66] text-white font-bold text-sm px-2 py-1 rounded-full flex items-center justify-center w-8 h-8">AK</span>
-                    <span id="navbar-title" class="text-white text-2xl font-bold ml-2">AntiKorupsi</span>
-                </a>
-                <div class="flex items-center space-x-6">
-                    <ul class="hidden md:flex space-x-6 text-white">
-                        <li><a href="#" class="nav-item">Beranda</a></li>
-                        <li><a href="#about" class="nav-item">Tentang</a></li>
-                        <li><a href="#platform" class="nav-item">Platform</a></li>
-                        <li><a href="#dampak" class="nav-item">Dampak</a></li>
-                        <li><a href="#" class="nav-item">Bergabung</a></li>
-                    </ul>
-                    <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block">Masuk</a>
-                </div>
-            </div>
-        </nav>
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 transition duration-300 bg-[#04336c]">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+                <span class="bg-[#002b66] text-white font-bold text-sm px-2 py-1 rounded-full flex items-center justify-center w-8 h-8">AK</span>
+                <span id="navbar-title" class="text-white text-2xl font-bold ml-2">AntiKorupsi</span>
+            </a>
+            
+            <!-- Menu Toggle Button (Hamburger) -->
+            <button id="menu-toggle" class="text-white text-2xl md:hidden">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navbar Menu -->
+            <ul id="nav-menu" class="hidden md:flex space-x-6 text-white md:block">
+                <li><a href="#" class="nav-item">Beranda</a></li>
+                <li><a href="#about" class="nav-item">Tentang</a></li>
+                <li><a href="#platform" class="nav-item">Platform</a></li>
+                <li><a href="#dampak" class="nav-item">Dampak</a></li>
+                <li><a href="#" class="nav-item">Bergabung</a></li>
+            </ul>
+
+            <!-- Login Button -->
+            <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block">Masuk</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-[#04336c] flex flex-col items-center justify-center text-white">
+        <ul class="text-center space-y-6 text-lg font-semibold">
+            <li><a href="#" class="block">Beranda</a></li>
+            <li><a href="#about" class="block">Tentang</a></li>
+            <li><a href="#platform" class="block">Platform</a></li>
+            <li><a href="#dampak" class="block">Dampak</a></li>
+            <li><a href="#" class="block">Bergabung</a></li>
+        </ul>
+        <button id="close-menu" class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold">Masuk</button>
+    </div>
+
+
         
 
 
@@ -59,7 +80,7 @@
                 <p class="mt-4 text-lg">Bergabunglah dengan komunitas kami dalam melawan korupsi. Bersama, kita dapat menciptakan masyarakat yang lebih jujur, adil, dan transparan.</p>
 
                 <!-- Buttons -->
-                <div class="mt-6 flex space-x-4">
+                <div class="mt-6 flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 w-full">
                     <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold">Bergabung Sekarang</a>
                     <a href="#" class="bg-gray-300 text-blue-900 px-6 py-3 rounded-md font-semibold transition duration-300 hover:bg-blue-900 hover:text-white">
                         Pelajari Lebih Lanjut
@@ -67,7 +88,7 @@
                 </div>
             </div>
             <!-- Image Section -->
-            <div class="md:w-1/2 px-6 mt-8 md:mt-0">
+            <div class="md:w-1/2 px-6 mt-8 md:mt-0 hidden md:block">
                 <img src="images/landingpage2.jpg" alt="Anti Korupsi" class="w-full md:w-[700px] lg:w-[700px] rounded-lg shadow-lg">
             </div>
         </div>
@@ -136,7 +157,7 @@
 <section id="platform" class="bg-[#e6f0ff] py-16">
     <div class="container mx-auto text-center">
         <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-widest">PLATFORM KAMI</h3>
-        <h2 class="text-3xl font-extrabold text-[#012A5B] mt-2">Alat yang Kuat untuk Transparansi</h2>
+        <h2 class="text-3xl font-extrabold text-[#012A5B] mt-2">Alat yang Kuat <br> untuk Transparansi</h2>
         <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
             Platform kami menyediakan alat dan sumber daya komprehensif untuk membantu warga, organisasi, dan pemerintah memerangi korupsi secara efektif.
         </p>
@@ -222,25 +243,25 @@
 
         <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Card 1 -->
-            <div class="bg-[#0A3D72] p-6 rounded-lg text-center border border-[#0D4F8B]">
+            <div class="bg-[#0A3D72] bg-opacity-50 p-6 rounded-lg text-center border border-[#0D4F8B]">
                 <h3 class="text-4xl font-extrabold text-[#6EC6FF]">10,000+</h3>
                 <p class="mt-2 text-blue-200">Anggota Komunitas</p>
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-[#0A3D72] p-6 rounded-lg text-center border border-[#0D4F8B]">
+            <div class="bg-[#0A3D72] bg-opacity-50 p-6 rounded-lg text-center border border-[#0D4F8B]">
                 <h3 class="text-4xl font-extrabold text-[#6EC6FF]">500+</h3>
                 <p class="mt-2 text-blue-200">Laporan Ditangani</p>
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-[#0A3D72] p-6 rounded-lg text-center border border-[#0D4F8B]">
+            <div class="bg-[#0A3D72] bg-opacity-50 p-6 rounded-lg text-center border border-[#0D4F8B]">
                 <h3 class="text-4xl font-extrabold text-[#6EC6FF]">50+</h3>
                 <p class="mt-2 text-blue-200">Organisasi Mitra</p>
             </div>
 
             <!-- Card 4 -->
-            <div class="bg-[#0A3D72] p-6 rounded-lg text-center border border-[#0D4F8B]">
+            <div class="bg-[#0A3D72] bg-opacity-50 p-6 rounded-lg text-center border border-[#0D4F8B]">
                 <h3 class="text-4xl font-extrabold text-[#6EC6FF]">120+</h3>
                 <p class="mt-2 text-blue-200">Sumber Daya Edukasi</p>
             </div>
@@ -277,7 +298,7 @@
         </div>
 
         <!-- Bagian Gambar -->
-        <div class="w-full md:w-[45%]">
+        <div class="w-full md:w-[45%] hidden md:block">
             <img src="images/laptop.png" alt="Bergabung dengan Komunitas" class="w-full h-full object-cover">
         </div>
     </div>
@@ -286,7 +307,7 @@
 
 
     <!-- Footer -->
-    <footer class="bg-[#0A1930] text-gray-300 py-10">
+    <footer class="bg-[#001533] text-gray-300 py-10">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Kolom 1: Logo dan Deskripsi -->
             <div>
@@ -321,9 +342,9 @@
                 <h3 class="font-semibold text-white">Tautan Cepat</h3>
                 <ul class="mt-3 space-y-2">
                     <li><a href="#" class="hover:text-blue-400">Beranda</a></li>
-                    <li><a href="#" class="hover:text-blue-400">Tentang</a></li>
-                    <li><a href="#" class="hover:text-blue-400">Fitur</a></li>
-                    <li><a href="#" class="hover:text-blue-400">Dampak</a></li>
+                    <li><a href="#about" class="hover:text-blue-400">Tentang</a></li>
+                    <li><a href="#platform" class="hover:text-blue-400">Platform</a></li>
+                    <li><a href="#dampak" class="hover:text-blue-400">Dampak</a></li>
                     <li><a href="#" class="hover:text-blue-400">Bergabung</a></li>
                 </ul>
             </div>
@@ -357,14 +378,9 @@
         </div>
     </footer>
     
-    <footer class="bg-gray-900 text-white py-10">
+    <footer class="bg-[#001533] text-white py-10">
         <div class="container mx-auto text-center">
-            <p>&copy; 2025 Anti-Korupsi. Hak Cipta Dilindungi.</p>
-            <div class="mt-4">
-                <a href="#" class="mx-2 hover:text-yellow-400">Beranda</a> |
-                <a href="#" class="mx-2 hover:text-yellow-400">Tentang</a> |
-                <a href="#" class="mx-2 hover:text-yellow-400">Fitur</a>
-            </div>
+            <p>&copy; 2025 Portal Komunitas AntiKorupsi. Hak Cipta Dilindungi.</p>
         </div>
     </footer>
 
@@ -380,6 +396,20 @@
         navbar.classList.remove('nav-scrolled'); // Remove styles
     }
         });
+
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+        document.getElementById("close-menu").addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.add("hidden");
+        });
+
+        document.querySelectorAll("#mobile-menu a").forEach(item => {
+        item.addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.add("hidden");
+        });
+    });
     </script>
     
     
