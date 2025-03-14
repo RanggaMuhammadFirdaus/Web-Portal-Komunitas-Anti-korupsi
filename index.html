@@ -12,63 +12,65 @@
 </head>
 <body class="bg-[#04336c] font-[Poppins]">        
 
-                <!-- Navbar -->
-        <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 bg-[#04336c] transition duration-300">
-            <div class="container mx-auto flex justify-between items-center">
-                <!-- Logo -->
-                <a href="#" class="flex items-center">
-                    <span class="bg-[#002b66] text-white font-bold text-sm px-2 py-1 rounded-full w-8 h-8 flex items-center justify-center">AK</span>
-                    <span id="navbar-title" class="text-white text-2xl font-bold ml-2">AntiKorupsi</span>
+         <!-- Navbar -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 bg-[#04336c] transition duration-300">
+    <div class="container mx-auto flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center">
+            <span class="bg-[#002b66] text-white font-bold text-sm px-2 py-1 rounded-full w-5 h-5 flex items-center justify-center">AK</span>
+            <span id="navbar-title" class="text-white text-2xl font-bold ml-2">AntiKorupsi</span>
+        </a>
+        
+        <!-- Navbar Menu -->
+        <ul id="nav-items" class="hidden md:flex space-x-2.5 text-white ml-auto items-center">
+            <li><a href="#" class="nav-item">Beranda</a></li>
+            <li><a href="#about" class="nav-item">Tentang</a></li>
+            
+            <!-- Platform with Submenu -->
+            <li class="relative">
+                <a href="#" class="nav-item toggle-menu flex items-center space-x-1" data-menu="platform-menu">
+                    <span>Fitur</span>
+                    <svg class="w-4 h-4 transition-transform duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
                 </a>
-                
-                <!-- Menu Toggle Button (Hamburger) -->
-                <button id="menu-toggle" class="text-white text-2xl md:hidden">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <ul id="platform-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
+                    <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
+                    <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
+                    <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
+                </ul>
+            </li>
 
-                <!-- Navbar Menu -->
-                <ul id="nav-items" class="hidden md:flex space-x-2 text-white">
-                    <li><a href="#" class="nav-item">Beranda</a></li>
-                    <li><a href="#about" class="nav-item">Tentang</a></li>
-                    
-                    <!-- Platform with Submenu -->
-                    <li class="relative">
-                        <a href="#" class="nav-item toggle-menu flex items-center space-x-1" data-menu="platform-menu">
-                            <span>Fitur</span>
-                            <svg class="w-4 h-4 transition-transform duration-300 ease-in-out" id="arrow-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-                        <ul id="platform-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
-                            <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
-                            <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
-                            <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
-                        </ul>
-                    </li>
-                    
+            <li><a href="#dampak" class="nav-item">Dampak</a></li>
 
-                    <li><a href="#dampak" class="nav-item">Dampak</a></li>
+            <!-- Bergabung with Submenu -->
+            <li class="relative">
+                <a href="#" class="nav-item toggle-menu flex items-center space-x-1" data-menu="join-menu">
+                    <span>Bergabung</span>
+                    <svg class="w-4 h-4 transition-transform duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+                <ul id="join-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
+                    <li><a href="#daftar" class="block px-4 py-2 hover:bg-gray-200">Daftar</a></li>
+                </ul>
+            </li>
 
-                    <!-- Bergabung with Submenu -->
-                    <li class="relative">
-                        <a href="#" class="nav-item toggle-menu flex items-center space-x-1" data-menu="join-menu">
-                            <span>Bergabung</span>
-                            <svg class="w-4 h-4 transition-transform duration-300 ease-in-out" id="arrow-icon-join" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-                        <ul id="join-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
-                            <li><a href="#daftar" class="block px-4 py-2 hover:bg-gray-200">Daftar</a></li>
-                            <!-- <li><a href="#login" class="block px-4 py-2 hover:bg-gray-200">Login</a></li> -->
-                        </ul>
-                    </li>
+            <!-- Login Button -->
+            <li>
+                <a href="#" class="bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:flex items-center">Masuk</a>
+            </li>
+        </ul>
 
-                <!-- Login Button -->
-                <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block flex items-center h-full">Masuk</a>
+        <!-- Menu Toggle Button (Hamburger) for Mobile -->
+        <button id="menu-toggle" class="text-white text-2xl md:hidden">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
 
-            </div>
-        </nav>
-          
+   
 
        <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden fixed inset-0 bg-[#04336c] text-white flex flex-col items-center justify-center z-50 p-4">
@@ -155,7 +157,7 @@
         
         <!-- Scroll Down Indicator -->
         <div class="flex flex-col items-center mt-10 opacity-70 animate-bounce">            
-            <a href="#about" class="scroll-down">
+            <a href="#tokoh" class="scroll-down">
                 <p class="text-white text-lg font-semibold mb-2">Gulir</p>
                 <svg class="w-10 h-10 text-white opacity-70" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -166,16 +168,16 @@
     </header>
 
     <!-- Profil Tokoh Section -->
-    <section class="bg-[#021c44] text-white py-16">
+    <section id="tokoh" class="bg-[#021c44] text-white py-16">
         <div class="container mx-auto flex flex-col md:flex-row items-center">
             <!-- Gambar Tokoh -->
             <div class="md:w-1/2 px-6 flex justify-center">
-                <img src="images/Rangga.jpeg" alt="Anies Baswedan" class="w-[400px] md:w-[500px] rounded-lg shadow-lg">
+                <img src="images/Rangga.jpeg" alt="Rangga Muhammad Firdaus" class="w-[400px] md:w-[500px] rounded-lg shadow-lg">
             </div>
 
             <!-- Deskripsi Tokoh -->
             <div class="md:w-1/2 px-6">
-                <p class="text-sm uppercase text-gray-300 tracking-wide">Ketua Anti Korupsi/p>
+                <p class="text-sm uppercase text-gray-300 tracking-wide">Ketua Anti Korupsi</p>
                 <h2 class="text-4xl md:text-5xl font-bold mt-2">Rangga <br> <span class="text-blue-400">Muhammad. F</span></h2>
 
                 <p class="mt-4 text-lg italic">"Jangan KORUPSI kocakkkkkk!!!!!!!"</p>
