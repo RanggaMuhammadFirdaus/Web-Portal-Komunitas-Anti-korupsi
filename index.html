@@ -40,17 +40,28 @@
             </div>
         </nav>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="fixed inset-0 bg-[#04336c] hidden flex flex-col items-center justify-center text-white">
-            <ul class="text-center space-y-6 text-lg font-semibold w-full">
-                <li><a href="#" class="block">Beranda</a></li>
-                <li><a href="#about" class="block">Tentang</a></li>
-                <li><a href="#platform" class="block">Platform</a></li>
-                <li><a href="#dampak" class="block">Dampak</a></li>
-                <li><a href="#" class="block">Bergabung</a></li>
-            </ul>
-            <button id="close-menu" class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold w-10/12">Masuk</button>
-        </div>
+      <!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-[#04336c] text-white">
+    
+    <!-- Close Button (Positioned Correctly) -->
+    <button id="close-menu" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+
+    <!-- Navigation Links -->
+    <div class="flex flex-col items-center justify-center h-full">
+        <ul class="text-center space-y-6 text-lg font-semibold">
+            <li><a href="#" class="block">Beranda</a></li>
+            <li><a href="#about" class="block">Tentang</a></li>
+            <li><a href="#platform" class="block">Platform</a></li>
+            <li><a href="#dampak" class="block">Dampak</a></li>
+            <li><a href="#" class="block">Bergabung</a></li>
+        </ul>
+    
+        <button id="login-button" class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold">Masuk</button>
+    </div>
+
+</div>
+
+
 
 
         
@@ -269,6 +280,46 @@
     </div>
 </section>
 
+<!-- Kegiatan Section -->
+<section id="kegiatan" class="bg-white py-16 text-gray-900">
+    <div class="container mx-auto text-center">
+        <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-widest">KEGIATAN</h3>
+        <h2 class="text-3xl font-extrabold mt-2">Aksi Nyata dalam Pemberantasan Korupsi</h2>
+        <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
+            Berbagai kegiatan dan inisiatif terbaru dalam gerakan anti-korupsi, mulai dari investigasi, kebijakan baru, hingga kasus yang sedang diproses.
+        </p>
+
+        <!-- Carousel -->
+        <div id="kegiatanCarousel" class="relative mt-12">
+            <div class="relative w-full overflow-hidden">
+                <div class="flex transition-transform duration-500 ease-in-out" id="carouselItems">
+                    <!-- Activity 1 -->
+                    <div class="min-w-full bg-gray-100 rounded-lg shadow-md">
+                        <h3>Investigasi Korupsi Dana Pendidikan</h3>
+                        <p>Penyelidikan terbaru mengungkap penyalahgunaan dana pendidikan di beberapa wilayah, dengan indikasi kerugian miliaran rupiah.</p>
+                        <span>Dipublikasikan: 10 Maret 2025</span>
+                    </div>
+                    
+                    <!-- Activity 2 -->
+                    <div class="min-w-full bg-gray-100 rounded-lg shadow-md">
+                        <h3>UU Anti-Korupsi Baru Ditetapkan</h3>
+                        <p>Pemerintah telah mengesahkan undang-undang baru untuk memperketat hukuman bagi pelaku korupsi, termasuk pejabat negara.</p>
+                        <span>Dipublikasikan: 5 Maret 2025</span>
+                    </div>
+
+                    <!-- Activity 3 -->
+                    <div class="min-w-full bg-gray-100 rounded-lg shadow-md">
+                        <h3>Kasus Korupsi Bansos: Proses Hukum Berjalan</h3>
+                        <p>Kasus korupsi bantuan sosial yang melibatkan pejabat tinggi kini telah memasuki tahap persidangan dengan bukti yang semakin kuat.</p>
+                        <span>Dipublikasikan: 1 Maret 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <!-- Section Bergabung dengan Komunitas -->
 <section id="bergabung" class="bg-gradient-to-r from-[#0A2A66] via-[#05204D] to-[#01143A] flex items-center justify-center py-16 px-6">
     <div class="max-w-4xl w-full bg-[#E8EEF7] rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden border border-[#CBD6E2]">
@@ -429,6 +480,21 @@
             item.addEventListener("click", function () {
                 document.getElementById("mobile-menu").classList.add("hidden");
             });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const carouselItems = document.getElementById("carouselItems");
+            let index = 0;
+            const totalItems = carouselItems.children.length;
+
+            function updateCarousel() {
+                carouselItems.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            setInterval(() => {
+                index = (index + 1) % totalItems; // Loop from last to first
+                updateCarousel();
+            }, 5000);
         });
     </script>
     

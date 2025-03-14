@@ -139,6 +139,74 @@ html {
     }
 }
 
+/* Karousel */
+
+#kegiatanCarousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#carouselItems {
+    display: flex;
+    width: 100%;
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in-out;
+}
+
+#carouselItems > div {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    text-align: center;
+    background-color: #f9fafb; /* Light gray for better visibility */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the text is centered */
+#carouselItems h3 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #012A5B;
+}
+
+#carouselItems p {
+    color: #333;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+#carouselItems span {
+    color: #176BFF;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Tombol Close Navbar Mobile */
+#close-menu {
+    position: absolute;
+    top: 20px;
+    left: 180px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#close-menu:hover {
+    color: #ffcc00; /* Highlight on hover */
+}
+
+
+
 @media (max-width: 480px) {
     #navbar {
         padding: 8px 10px;
