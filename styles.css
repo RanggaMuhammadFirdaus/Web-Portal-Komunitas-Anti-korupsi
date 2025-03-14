@@ -58,6 +58,15 @@ html {
     transform: translateY(5px);
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+
 /* Mobile Menu */
 #mobile-menu {
     background-color: rgba(4, 25, 56, 0.99);

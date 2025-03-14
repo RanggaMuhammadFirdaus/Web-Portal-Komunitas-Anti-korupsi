@@ -10,21 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-[#04336c] font-[Poppins]">
-
-        <!-- Navbar -->
-        <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 bg-[#04336c] transition duration-300">
-            <div class="container mx-auto flex justify-between items-center">
-                <!-- Logo -->
-                <a href="#" class="flex items-center">
-                    <span class="bg-[#002b66] text-white font-bold text-sm px-2 py-1 rounded-full w-8 h-8 flex items-center justify-center">AK</span>
-                    <span id="navbar-title" class="text-white text-2xl font-bold ml-2">AntiKorupsi</span>
-                </a>
-                
-                <!-- Menu Toggle Button (Hamburger) -->
-                <button id="menu-toggle" class="text-white text-2xl md:hidden">
-                    <i class="fas fa-bars"></i>
-                </button>
+<body class="bg-[#04336c] font-[Poppins]">        
 
                 <!-- Navbar -->
         <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 bg-[#04336c] transition duration-300">
@@ -46,36 +32,42 @@
                     <li><a href="#about" class="nav-item">Tentang</a></li>
                     
                     <!-- Platform with Submenu -->
-                <li class="relative">
-                    <a href="#" class="nav-item toggle-menu" data-menu="platform-menu">Fitur</a>
-                    <ul id="platform-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
-                        <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
-                        <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
-                        <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
-                    </ul>
-                </li>
+                    <li class="relative">
+                        <a href="#" class="nav-item toggle-menu flex items-center space-x-1" data-menu="platform-menu">
+                            <span>Fitur</span>
+                            <svg class="w-4 h-4 transition-transform duration-300 ease-in-out" id="arrow-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <ul id="platform-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
+                            <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
+                            <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
+                            <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
+                        </ul>
+                    </li>
+                    
 
                     <li><a href="#dampak" class="nav-item">Dampak</a></li>
 
                     <!-- Bergabung with Submenu -->
                     <li class="relative">
-                        <a href="#" class="nav-item toggle-menu" data-menu="join-menu">Bergabung</a>
+                        <a href="#" class="nav-item toggle-menu flex items-center space-x-1" data-menu="join-menu">
+                            <span>Bergabung</span>
+                            <svg class="w-4 h-4 transition-transform duration-300 ease-in-out" id="arrow-icon-join" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
                         <ul id="join-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
                             <li><a href="#daftar" class="block px-4 py-2 hover:bg-gray-200">Daftar</a></li>
                             <!-- <li><a href="#login" class="block px-4 py-2 hover:bg-gray-200">Login</a></li> -->
                         </ul>
                     </li>
 
-
                 <!-- Login Button -->
                 <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block">Masuk</a>
             </div>
         </nav>
-
-                <!-- Login Button -->
-                <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block">Masuk</a>
-            </div>
-        </nav>
+          
 
       <!-- Mobile Menu -->
 <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-[#04336c] text-white">
@@ -97,12 +89,6 @@
     </div>
 
 </div>
-
-
-
-
-        
-
 
     <!-- Hero Section -->
     <header class="bg-[#04336c] text-white py-16">
@@ -326,35 +312,93 @@
             Berbagai kegiatan dan inisiatif terbaru dalam gerakan anti-korupsi, mulai dari investigasi, kebijakan baru, hingga kasus yang sedang diproses.
         </p>
 
-        <!-- Carousel -->
-        <div id="kegiatanCarousel" class="relative mt-12">
-            <div class="relative w-full overflow-hidden">
-                <div class="flex transition-transform duration-500 ease-in-out" id="carouselItems">
-                    <!-- Activity 1 -->
-                    <div class="min-w-full bg-gray-100 rounded-lg shadow-md">
-                        <h3>Investigasi Korupsi Dana Pendidikan</h3>
-                        <p>Penyelidikan terbaru mengungkap penyalahgunaan dana pendidikan di beberapa wilayah, dengan indikasi kerugian miliaran rupiah.</p>
-                        <span>Dipublikasikan: 10 Maret 2025</span>
+        <!-- Carousel Container -->
+        <div class="relative mt-12 overflow-hidden">
+            <div class="flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth">
+                <!-- Activity 1 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/kegiatan1.PNG" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Seminar Transparansi Keuangan</h3>
+                    <p class="text-sm text-gray-600">Seminar yang membahas pentingnya transparansi keuangan dalam mengurangi risiko korupsi.</p>
+                    <div class="mt-2 text-sm">
+                        📅 28 Februari 2024 <br>
+                        📍 Universitas Indonesia <br>
+                        👥 200 Peserta
                     </div>
-                    
-                    <!-- Activity 2 -->
-                    <div class="min-w-full bg-gray-100 rounded-lg shadow-md">
-                        <h3>UU Anti-Korupsi Baru Ditetapkan</h3>
-                        <p>Pemerintah telah mengesahkan undang-undang baru untuk memperketat hukuman bagi pelaku korupsi, termasuk pejabat negara.</p>
-                        <span>Dipublikasikan: 5 Maret 2025</span>
-                    </div>
+                    <button class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Lihat Detail
+                    </button>
+                </div>
 
-                    <!-- Activity 3 -->
-                    <div class="min-w-full bg-gray-100 rounded-lg shadow-md">
-                        <h3>Kasus Korupsi Bansos: Proses Hukum Berjalan</h3>
-                        <p>Kasus korupsi bantuan sosial yang melibatkan pejabat tinggi kini telah memasuki tahap persidangan dengan bukti yang semakin kuat.</p>
-                        <span>Dipublikasikan: 1 Maret 2025</span>
+                <!-- Activity 2 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/kegiatan2.PNG" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Forum Diskusi Kebijakan Publik</h3>
+                    <p class="text-sm text-gray-600">Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi dan tata kelola yang baik.</p>
+                    <div class="mt-2 text-sm">
+                        📅 10 Maret 2024 <br>
+                        📍 Balai Kota Surabaya <br>
+                        👥 150 Peserta
                     </div>
+                    <button class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Lihat Detail
+                    </button>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/kegiatan3.PNG" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Forum Diskusi Kebijakan Publik Dunia  </h3>
+                    <p class="text-sm text-gray-600">Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi dan tata kelola yang baik.</p>
+                    <div class="mt-2 text-sm">
+                        📅 10 Maret 2024 <br>
+                        📍 Balai Kota Surabaya <br>
+                        👥 150 Peserta
+                    </div>
+                    <button class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Lihat Detail
+                    </button>
+                </div>
+
+                <!-- Activity 4 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/kegiatan4.PNG" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Forum Diskusi Kebijakan Publik Masyarakat</h3>
+                    <p class="text-sm text-gray-600">Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi dan tata kelola yang baik.</p>
+                    <div class="mt-2 text-sm">
+                        📅 10 Maret 2024 <br>
+                        📍 Balai Kota Surabaya <br>
+                        👥 150 Peserta
+                    </div>
+                    <button class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Lihat Detail
+                    </button>
+                </div>
+
+                <!-- Activity 5 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/kegiatan1.PNG" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Pelatihan Audit Investigasi</h3>
+                    <p class="text-sm text-gray-600">Pelatihan khusus tentang teknik audit investigasi untuk mengungkap kasus-kasus korupsi.</p>
+                    <div class="mt-2 text-sm">
+                        📅 5 April 2024 <br>
+                        📍 Hotel Mulia Jakarta <br>
+                        👥 80 Peserta
+                    </div>
+                    <button class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Lihat Detail
+                    </button>
                 </div>
             </div>
+            
         </div>
+
+        <button class="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+            Lihat Semua Kegiatan
+        </button>
     </div>
 </section>
+
 
 
 <!-- Section Bergabung dengan Komunitas -->
@@ -560,6 +604,18 @@
         }, 5000);
     }
 });
+
+const carousel = document.querySelector("#kegiatan .overflow-x-auto");
+    let scrollAmount = 0;
+    const slideInterval = setInterval(() => {
+        if (scrollAmount < carousel.scrollWidth - carousel.clientWidth) {
+            scrollAmount += carousel.clientWidth;
+        } else {
+            scrollAmount = 0;
+        }
+        carousel.scrollTo({ left: scrollAmount, behavior: "smooth" });
+    }, 3000); // Auto-slide every 3 seconds
+
 
 
     </script>
