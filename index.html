@@ -26,14 +26,51 @@
                     <i class="fas fa-bars"></i>
                 </button>
 
+                <!-- Navbar -->
+        <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 bg-[#04336c] transition duration-300">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                    <span class="bg-[#002b66] text-white font-bold text-sm px-2 py-1 rounded-full w-8 h-8 flex items-center justify-center">AK</span>
+                    <span id="navbar-title" class="text-white text-2xl font-bold ml-2">AntiKorupsi</span>
+                </a>
+                
+                <!-- Menu Toggle Button (Hamburger) -->
+                <button id="menu-toggle" class="text-white text-2xl md:hidden">
+                    <i class="fas fa-bars"></i>
+                </button>
+
                 <!-- Navbar Menu -->
                 <ul id="nav-items" class="hidden md:flex space-x-6 text-white">
                     <li><a href="#" class="nav-item">Beranda</a></li>
                     <li><a href="#about" class="nav-item">Tentang</a></li>
-                    <li><a href="#platform" class="nav-item">Platform</a></li>
+                    
+                    <!-- Platform with Submenu -->
+                <li class="relative">
+                    <a href="#" class="nav-item toggle-menu" data-menu="platform-menu">Fitur</a>
+                    <ul id="platform-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
+                        <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
+                        <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
+                        <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
+                    </ul>
+                </li>
+
                     <li><a href="#dampak" class="nav-item">Dampak</a></li>
-                    <li><a href="#" class="nav-item">Bergabung</a></li>
-                </ul>
+
+                    <!-- Bergabung with Submenu -->
+                    <li class="relative">
+                        <a href="#" class="nav-item toggle-menu" data-menu="join-menu">Bergabung</a>
+                        <ul id="join-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
+                            <li><a href="#daftar" class="block px-4 py-2 hover:bg-gray-200">Daftar</a></li>
+                            <!-- <li><a href="#login" class="block px-4 py-2 hover:bg-gray-200">Login</a></li> -->
+                        </ul>
+                    </li>
+
+
+                <!-- Login Button -->
+                <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block">Masuk</a>
+            </div>
+        </nav>
 
                 <!-- Login Button -->
                 <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block">Masuk</a>
@@ -437,65 +474,94 @@
 
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let navbar = document.getElementById("navbar");
-            let menuToggle = document.getElementById("menu-toggle");
-            let mobileMenu = document.getElementById("mobile-menu");
-            let closeMenu = document.getElementById("close-menu");
-            let menuLinks = document.querySelectorAll("#mobile-menu a");
-        
-            // Efek navbar berubah warna saat scroll
-            window.addEventListener("scroll", function () {
-                if (window.scrollY > 10) {
-                    navbar.classList.add("nav-scrolled");
-                } else {
-                    navbar.classList.remove("nav-scrolled");
+      document.addEventListener("DOMContentLoaded", function () {
+    let navbar = document.getElementById("navbar");
+    let menuToggle = document.getElementById("menu-toggle");
+    let mobileMenu = document.getElementById("mobile-menu");
+    let closeMenu = document.getElementById("close-menu");
+    let menuLinks = document.querySelectorAll("#mobile-menu a");
+    let toggleMenus = document.querySelectorAll(".toggle-menu");
+
+    // Efek navbar berubah warna saat scroll (TIDAK DIUBAH)
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 10) {
+            navbar.classList.add("nav-scrolled");
+        } else {
+            navbar.classList.remove("nav-scrolled");
+        }
+    });
+
+    // Toggle mobile menu saat tombol hamburger ditekan
+    if (menuToggle) {
+        menuToggle.addEventListener("click", function () {
+            mobileMenu.classList.toggle("active");
+        });
+    }
+
+    // Tutup menu mobile saat tombol close ditekan
+    if (closeMenu) {
+        closeMenu.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+        });
+    }
+
+    // Tutup menu mobile jika salah satu item menu diklik
+    menuLinks.forEach(item => {
+        item.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+        });
+    });
+
+    // Toggle submenu saat menu diklik
+    toggleMenus.forEach(menu => {
+        menu.addEventListener("click", function (event) {
+            event.preventDefault();
+            const menuId = menu.getAttribute("data-menu");
+            const submenu = document.getElementById(menuId);
+            
+            if (submenu) {
+                const isHidden = submenu.classList.contains("hidden");
+
+                // Tutup semua submenu lain sebelum membuka yang baru
+                document.querySelectorAll(".submenu").forEach(item => {
+                    item.classList.add("hidden");
+                });
+
+                // Tampilkan submenu yang dipilih
+                if (isHidden) {
+                    submenu.classList.remove("hidden");
                 }
-            });
-        
-            // Toggle mobile menu saat tombol hamburger ditekan
-            if (menuToggle) {
-                menuToggle.addEventListener("click", function () {
-                    mobileMenu.classList.toggle("active");
-                });
             }
-        
-            // Tutup mobile menu saat tombol close ditekan
-            if (closeMenu) {
-                closeMenu.addEventListener("click", function () {
-                    mobileMenu.classList.remove("active");
-                });
-            }
-        
-            // Tutup menu ketika salah satu item menu diklik
-            menuLinks.forEach(item => {
-                item.addEventListener("click", function () {
-                    mobileMenu.classList.remove("active");
-                });
+        });
+    });
+
+    // Tutup submenu jika klik di luar area menu
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".relative")) {
+            document.querySelectorAll(".submenu").forEach(menu => {
+                menu.classList.add("hidden");
             });
-        });
-        
+        }
+    });
 
-        document.querySelectorAll("#mobile-menu a").forEach(item => {
-            item.addEventListener("click", function () {
-                document.getElementById("mobile-menu").classList.add("hidden");
-            });
-        });
+    // Fungsi carousel (slider otomatis)
+    const carouselItems = document.getElementById("carouselItems");
+    if (carouselItems) {
+        let index = 0;
+        const totalItems = carouselItems.children.length;
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const carouselItems = document.getElementById("carouselItems");
-            let index = 0;
-            const totalItems = carouselItems.children.length;
+        function updateCarousel() {
+            carouselItems.style.transform = `translateX(-${index * 100}%)`;
+        }
 
-            function updateCarousel() {
-                carouselItems.style.transform = `translateX(-${index * 100}%)`;
-            }
+        setInterval(() => {
+            index = (index + 1) % totalItems;
+            updateCarousel();
+        }, 5000);
+    }
+});
 
-            setInterval(() => {
-                index = (index + 1) % totalItems; // Loop from last to first
-                updateCarousel();
-            }, 5000);
-        });
+
     </script>
     
     
