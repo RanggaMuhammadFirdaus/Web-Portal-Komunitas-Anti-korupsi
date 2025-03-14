@@ -67,6 +67,7 @@ html {
 }
 
 
+
 /* Mobile Menu */
 #mobile-menu {
     background-color: rgba(4, 25, 56, 0.99);
@@ -84,6 +85,9 @@ html {
     opacity: 0;
     transform: translateY(-10px);
 }
+
+.hidden { display: none; }
+.show { display: block !important; }
 
 /* Show menu when active */
 #mobile-menu.active {
@@ -119,6 +123,7 @@ html {
     z-index: 1100;
     position: relative;
 }
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {

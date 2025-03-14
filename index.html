@@ -27,7 +27,7 @@
                 </button>
 
                 <!-- Navbar Menu -->
-                <ul id="nav-items" class="hidden md:flex space-x-6 text-white">
+                <ul id="nav-items" class="hidden md:flex space-x-2 text-white">
                     <li><a href="#" class="nav-item">Beranda</a></li>
                     <li><a href="#about" class="nav-item">Tentang</a></li>
                     
@@ -64,31 +64,57 @@
                     </li>
 
                 <!-- Login Button -->
-                <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block">Masuk</a>
+                <a href="#" class="login-btn bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:block flex items-center h-full">Masuk</a>
+
             </div>
         </nav>
           
 
-      <!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-[#04336c] text-white">
-    
-    <!-- Close Button (Positioned Correctly) -->
-    <button id="close-menu" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+       <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-[#04336c] text-white flex flex-col items-center justify-center z-50 p-4">
+        
+        <!-- Close Button -->
+        <button id="close-menu" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
 
-    <!-- Navigation Links -->
-    <div class="flex flex-col items-center justify-center h-full">
-        <ul class="text-center space-y-6 text-lg font-semibold">
+        <!-- Mobile Menu List -->
+        <ul class="text-center space-y-6 text-lg font-semibold w-full">
             <li><a href="#" class="block">Beranda</a></li>
             <li><a href="#about" class="block">Tentang</a></li>
-            <li><a href="#platform" class="block">Platform</a></li>
+
+            <!-- Fitur Dropdown -->
+            <li>
+                <button class="mobile-toggle flex items-center justify-center w-full">
+                    <span>Fitur</span>
+                    <svg class="w-4 h-4 ml-1 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <ul class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2">
+                    <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
+                    <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
+                    <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
+                </ul>
+            </li>
+
             <li><a href="#dampak" class="block">Dampak</a></li>
-            <li><a href="#" class="block">Bergabung</a></li>
+
+            <!-- Bergabung Dropdown -->
+            <li>
+                <button class="mobile-toggle flex items-center justify-center w-full">
+                    <span>Bergabung</span>
+                    <svg class="w-4 h-4 ml-1 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <ul class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2">
+                    <li><a href="#daftar" class="block px-4 py-2 hover:bg-gray-200">Daftar</a></li>
+                </ul>
+            </li>
         </ul>
-    
+
+        <!-- Login Button -->
         <button id="login-button" class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold">Masuk</button>
     </div>
-
-</div>
 
     <!-- Hero Section -->
     <header class="bg-[#04336c] text-white py-16">
@@ -138,6 +164,36 @@
         </div>
 
     </header>
+
+    <!-- Profil Tokoh Section -->
+    <section class="bg-[#021c44] text-white py-16">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <!-- Gambar Tokoh -->
+            <div class="md:w-1/2 px-6 flex justify-center">
+                <img src="images/Rangga.jpeg" alt="Anies Baswedan" class="w-[400px] md:w-[500px] rounded-lg shadow-lg">
+            </div>
+
+            <!-- Deskripsi Tokoh -->
+            <div class="md:w-1/2 px-6">
+                <p class="text-sm uppercase text-gray-300 tracking-wide">Ketua Anti Korupsi/p>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2">Rangga <br> <span class="text-blue-400">Muhammad. F</span></h2>
+
+                <p class="mt-4 text-lg italic">"Jangan KORUPSI kocakkkkkk!!!!!!!"</p>
+
+                <div class="mt-6 space-y-3">
+                    <p><span class="font-bold text-blue-400">01.</span> Menuntaskan amanah sebagai <strong>Mahasiswa IDE LPKIA (2021—2025)</strong>.</p>
+                    <p><span class="font-bold text-blue-400">02.</span> Menjadi <strong>Anggota LOOP (LPKIA Object Oriented Programming) (2022—2023)</strong>.</p>
+                    <p><span class="font-bold text-blue-400">03.</span> Inisiator gerakan <strong>Para Remaja (2024)</strong>.</p>
+                </div>
+
+                <!-- Tombol -->
+                <div class="mt-6">
+                    <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold">Lebih Kenali Rangga</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- About Section -->
@@ -475,7 +531,7 @@
                 <ul class="mt-3 space-y-2">
                     <li><a href="#" class="hover:text-blue-400">Beranda</a></li>
                     <li><a href="#about" class="hover:text-blue-400">Tentang</a></li>
-                    <li><a href="#platform" class="hover:text-blue-400">Platform</a></li>
+                    <li><a href="#platform" class="hover:text-blue-400">Fitur</a></li>
                     <li><a href="#dampak" class="hover:text-blue-400">Dampak</a></li>
                     <li><a href="#" class="hover:text-blue-400">Bergabung</a></li>
                 </ul>
@@ -578,6 +634,17 @@
             }
         });
     });
+
+    
+        // Toggle Submenus in Mobile
+        document.querySelectorAll('.mobile-toggle').forEach((toggle) => {
+            toggle.addEventListener("click", function () {
+                let submenu = this.nextElementSibling;
+                submenu.classList.toggle("hidden");
+                let icon = this.querySelector("svg");
+                icon.classList.toggle("rotate-180");
+            });
+        });
 
     // Tutup submenu jika klik di luar area menu
     document.addEventListener("click", function (event) {
